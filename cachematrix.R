@@ -27,7 +27,7 @@ makeCacheMatrix <- function(x = matrix())
 ## Then sets the value in the cache
 
 
-cacheSolve <- function(x,) 
+cacheSolve <- function(x, ...) 
 	{
         inv = x$getinv()
         
