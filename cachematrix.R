@@ -1,26 +1,23 @@
-
 ## Write a short comment describing this function
 ## The below function creates a list that contains a
 ## function that will:
-## set the value of the matrix
-## get the value of the matrix
-## set the value of the inverse
-## get the value of the inverse
+## Set the value of the matrix
+## Get the value of the matrix
+## Set the value of the inverse
+## Get the value of the inverse
 
-makeCacheMatrix <- function(x = matrix()) {
-	
+makeCacheMatrix <- function(x = matrix()) 
+	{
 	inv = NULL
 	set = function(y) {
 		x <<- y
 		inv <<- NULL
-		
 	}
 	get = function()x
 	setinv = function(inverse) inv <<- inverse
 	getinv = function() inv
 	list = (set=set, get=get, setinv=setinv, getinv=getinv)
 	
-
 }
 ## The below function works with the above function
 ## It returns the inverse of the matrix
@@ -30,8 +27,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Then sets the value in the cache
 
 
-
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x,) 
+	{
         inv = x$getinv()
         
         if (!is.null(inv)) {
